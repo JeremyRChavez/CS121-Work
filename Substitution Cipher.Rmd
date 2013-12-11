@@ -1,0 +1,18 @@
+```{r}
+subCypher <- function(word) {
+    spl <- strsplit(tolower(word), split = "")[[1]]
+    letters <- c("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z")
+    change = sapply( spl, FUN=function(x){which(x==letters)} )
+    return(paste(as.numeric(change), sep="", collapse=""))
+}
+
+encryption <- function(x) {
+  old <- as.character(paste(from, sep="", collapse=""))
+  new <- as.character(paste(to, sep="", collapse=""))
+  chartr(old, new, x)
+}
+deEncryption <- function(x) {
+  old <- as.character(paste(from, sep="", collapse=""))
+  new <- as.character(paste(to, sep="", collapse=""))
+  chartr(new, old, x)
+}

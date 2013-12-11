@@ -1,0 +1,44 @@
+# Testing a collaborative Rmd file
+
+```{r include=FALSE}
+require(mosaic)
+an error here
+```
+
+## Section
+
+And some text that has been changed and changed again
+
+## Another Section
+
+And some code:
+
+```{r dev="svg"}
+xyplot( width ~ length, groups=sex, data=KidsFeet )
+```
+
+And a summary of the data
+```{r}
+summary(KidsFeet)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+```{r}
+words <- readLines(url("http://dtkaplan.github.io/ScientificComputing/Syllabus/Daily/Day-07/word_list_moby_crossword-flat/word_list_moby_crossword.flat.txt"))
+
+crossword<-function(expr, x, a=1){
+grep(expr,x, perl=TRUE,value=TRUE)
+}
+
+#There are: 0 words of length 1; 85 words of length 2; 908 words of length 3; 3686 words of length 4; etc.
+#The 100 longest words:
+#3 words of length 22
+#[1] "counterdemonstrations" "hyperaggressivenesses" "microminiaturizations"
+#5 words of length 21
+#[1] "counterdemonstration" "counterdemonstrators" "hypersensitivenesses" "microminiaturization" "representativenesses"
+#16 words of length 20
+# [1] "anticonservationist" "comprehensivenesses" "counterdemonstrator" "counterinflationary" "counterpropagations"
+# [6] "counterretaliations" "disinterestednesses" "electrocardiographs" "extraconstitutional" "hyperaggressiveness"
+#[11] "inappropriatenesses" "inconsideratenesses" "interdenominational" "irreconcilabilities" "miscellaneousnesses"
+#[16] "multidenominational"
+#48 words of length 19
+# [1] "absentmindednesses" "adventitiousnesses" "antiadministration" "antidiscrimination" "apprehensivenesses"
+# [6] "biodegradabilities" "bloodthirstinesses" "cantankerousnesses" "characteristically" "chemotherapeutical"
+#[11] "counteraccusations" "counteraggressions" "counterpropagation" "counterretaliation" "counterrevolutions"
+#[16] "countersuggestions" "electrocardiograms" "electrocardiograph" "feeblemindednesses" "heterogenousnesses"
+#[21] "hydroelectricities" "hyperconscientious" "hypernationalistic" "hypersensitiveness" "hypersensitivities"
+#[26] "indispensabilities" "industrializations" "interinstitutional" "internationalizing" "interrelatednesses"
+#[31] "irresponsibilities" "lightheartednesses" "misinterpretations" "misrepresentations" "nondiscriminations"
+#[36] "obstreperousnesses" "perpendicularities" "postfertilizations" "rehospitalizations" "remunerativenesses"
+#[41] "representativeness" "simultaneousnesses" "straightforwardest" "subclassifications" "subconsciousnesses"
+#[46] "superintellectuals" "superintelligences" "unscrupulousnesses"
+#The first 28 words of length 18
+#[1] "acquaintanceships" "antiauthoritarian" "antieavesdropping" "antiestablishment" "antimaterialistic" "antimiscegen#ation"
+#[7] "antirevolutionary" "antitechnological" "blameworthinesses" "carnivorousnesses" "characterizations" "circumnavigations"
+#[13] "comprehensiveness" "consideratenesses" "constitutionality" "coproprietorships" "counteraccusation" "counteraggression"
+#[19] "counterchallenges" "countercomplaints" "countercriticisms" "counterinfluences" "counterrevolution" "counterstrategies"
+#[25] "countersuggestion" "countertendencies" "counterterrorisms" "counterterrorists"
+# 3+5+16+48+28
+#The number of words that start with a is 6557.
+#The number of words that start with b is 6848.
+#The number of words that start with c is 10385.
+#The number of words that start with d is 6436.
+#The number of words that start with e is 4364.
+#The number of words that start with q and have no u following is is 14.
