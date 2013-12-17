@@ -1,0 +1,30 @@
+
+```r
+countOdds <- function(x) {
+    return(sum(x%%2))
+}
+countEvens <- function(x) {
+    return(sum((1 + x)%%2))
+}
+hypotenuseLength <- function(a, b) {
+    return(sqrt(a^2 + b^2))
+}
+lawOfCosines <- function(a, b, theta) {
+    return(sqrt(a^2 + b^2 - (2 * a * b * cos(theta))))
+}
+thetaFromLengths <- function(a, b, c) {
+    return(acos((a^2 + b^2 - c^2)/(2 * a * b)))
+}
+thetaFromLengthsTest <- function(a, b, theta) {
+    c <- lawOfCosines(a, b, theta)
+    theta1 <- thetaFromLengths(a, b, c)
+    return(theta - theta1)
+}
+canvas <- function(x, y) {
+    plot(x, y, axes = FALSE, ann = FALSE, cex = 0)
+}
+drawCircle <- function(x, y, radius, col) {
+    plot(x, y, axes = FALSE, ann = FALSE, cex = radius, bg = col, pch = 21, 
+        border = NULL, col = "transparent")
+}
+```

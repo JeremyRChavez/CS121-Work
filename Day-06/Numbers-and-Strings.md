@@ -1,0 +1,35 @@
+
+```r
+outlier <- function(x) {
+    q1 = quantile(x, 0.25)
+    q3 = quantile(x, 0.75)
+    range = 1.5 * (q3 - q1)
+    res <- ((x < (q1 - range) | (x > (q3 + range))))
+    return(res)
+}
+
+digitToWord <- function(x, v) {
+    # w<- c('one','two','three','four','five','six','seven','eight','nine')
+    res <- v[x]
+    return(res)
+}
+
+lettersMatch <- function(expr, x) {
+    grep(expr, x, perl = TRUE, value = TRUE)
+}
+
+piSeries <- function(n) {
+    n <- c(1:n)
+    pi <- (4 * sum(((-1)^(n - 1))/(2 * (n - 1) + 1)))
+    return(pi)
+}
+
+howCloseToPi <- function(n) {
+    n <- c(1:n)
+    pi <- (4 * cumsum(((-1)^(n - 1))/(2 * (n - 1) + 1)))
+    plot(n, pi)
+    return(pi)
+    # The first place that pi rounds to 3 digits is [152] My estimate to get pi
+    # to the first 15 digits is well over 10^10
+}
+```
