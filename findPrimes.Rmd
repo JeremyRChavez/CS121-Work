@@ -1,0 +1,25 @@
+findPrimes<-function(n) {
+sieve<-function(n){
+A<-c(FALSE, rep(TRUE,n-1))
+for(i in 2:sqrt(n))
+  if(A[i]==TRUE) {
+    for(k in 1:n) {
+      k=i^2+(i*abs(1-k))
+      if(k>n)
+      break
+      A[k]=FALSE
+    }
+  }
+  return(A)
+}
+
+A<-sieve(n)
+B<-rep(0,n)
+for(i in 1:n) {
+if(A[i]==FALSE)
+next
+B[i]=i
+}
+B<-B[!B %in% 0]
+return(B)
+}
